@@ -6,6 +6,7 @@
     <script src="libs/angular/angular.js"></script>
     <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="libs/angular-resource/angular-resource.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
 
@@ -15,9 +16,11 @@
     <script src="views/modules.js"></script>
     <script src="views/overview/overview.js"></script>
     <script src="views/ui-macros/ui-macros.js"></script>
+    <script src="views/ui-macros/ui-macros-api.js"></script>
     <script src="components/modal/modalSrv.js"></script>
     <script src="components/common/modules.js"></script>
     <script src="components/common/globalConf.js"></script>
+    <script src="components/common/base64.js"></script>
 </head>
 
 <body>
@@ -45,7 +48,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="#/overview">Overview <span class="sr-only">(current)</span></a></li>
                 <li><a href="#/ui-macros">UI Macros</a></li>
                 <li><a href="#">UI Pages</a></li>
                 <li><a href="#">Include Scripts</a></li>
