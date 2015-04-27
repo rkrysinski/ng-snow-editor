@@ -1,6 +1,8 @@
+<div ui-view></div>
 
-    <h1>Macros</h1>
+<h1>Macros</h1>
 
-    <div ng-repeat="macro in uiMacros">
-        {{macro}}
-    </div>
+
+<div ng-repeat="macro in uiMacros">
+    <a ui-sref="ui-macros.detail({ sys_id: macro.sys_id})">{{macro.sys_name}}</a>
+</div>

@@ -7,8 +7,10 @@
     <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="libs/angular-resource/angular-resource.js"></script>
     <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="libs/angular-ui-ace/ui-ace.js"></script>
     <script src="libs/jquery/dist/jquery.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="libs/ace-builds/src-noconflict/ace.js"></script>
 
     <!-- custom -->
     <link rel="stylesheet" href="css/dashboard.css"/>
@@ -47,11 +49,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#/overview">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="#/ui-macros">UI Macros</a></li>
-                <li><a href="#">UI Pages</a></li>
-                <li><a href="#">Include Scripts</a></li>
+            <ul class="nav nav-sidebar" id="left-side-menu">
+                <li ui-sref-active="active"><a ui-sref="overview">Overview</a></li>
+                <li ui-sref-active="active"><a ui-sref="ui-macros">UI Macros</a></li>
+                <li ui-sref-active="active"><a href="#">UI Pages</a></li>
+                <li ui-sref-active="active"><a href="#">Include Scripts</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -59,6 +61,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    jQuery(document).ready(function () {
+        jQuery('#left-side-menu a').click(function (e) {
+            jQuery('#left-side-menu li').removeClass('active');
+            var $parent = jQuery(this).parent();
+            if (!$parent.hasClass('active')) {
+                $parent.addClass('active');
+            }
+        })
+    });
+</script>
 
 </body>
 </html>

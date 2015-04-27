@@ -4,6 +4,6 @@ angular
         return {
             base: 'https://dev13874.service-now.com/api/now/v1/table/',
             user: 'admin',
-            passwd: ''
+            passwd: 'Kry123$#'
         }
     })
