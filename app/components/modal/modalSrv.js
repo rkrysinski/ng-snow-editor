@@ -26,7 +26,7 @@ angular
                     }
                 });
                 myModal.result.then(function (modalData) {
-                    callback(modalData);
+                    if(callback) callback(modalData);
                 }, function (info) {
                     console.log(info);
                 })

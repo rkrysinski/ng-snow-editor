@@ -30,5 +30,6 @@ angular
             //delete: {
             //    method: 'DELETE'
             //}
+            //https://dev13874.service-now.com/api/now/v1/table/sys_dictionary?sysparm_query=internal_type=xml^ORinternal_type=script
         });
     })

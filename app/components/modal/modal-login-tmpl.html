@@ -1,21 +1,25 @@
-<form name="loginForm" novalidate>
+<form name="login-form" novalidate  autocomplete="on">
     <div class="modal-header">
         <h3 class="modal-title">
             Login credentials
         </h3>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" ng-init="user=model.user; base=model.base">
         <div class="form-group">
-            <label for="login">login:</label>
-            <input class="form-control" id="login" type="text" ng-model="login" autofocus/>
+            <label for="instance">Instance URL:</label>
+            <input class="form-control" id="instance" type="text" ng-model="base" autocomplete="on"/>
         </div>
         <div class="form-group">
-            <label for="pass">password:</label>
-            <input class="form-control" id="pass" type="password" ng-model="pass"/>
+            <label for="login">Login:</label>
+            <input class="form-control" name="login" id="login" type="text" ng-model="user" autocomplete="on"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input class="form-control" name="password" id="password" type="password" ng-model="passwd" autofocus autocomplete="on"/>
         </div>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" ng-click="ok(loginForm)">OK</button>
+        <button class="btn btn-primary" ng-click="ok('login-form')">OK</button>
         <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
     </div>
 </form>
